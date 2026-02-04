@@ -43,6 +43,10 @@
    - 所有标签页恢复正常声音状态
    - 图标变为灰色
 
+## 截图展示
+
+![扩展截图](ext_screen.png)
+
 ## 项目结构
 
 ```
@@ -61,7 +65,6 @@ focus-mute/
 │   ├── icon-off-128.png       # 禁用状态 128x128
 │   ├── icon-generator.html    # 图标生成器（可生成更美观的图标）
 │   └── generate-icons.js      # 图标生成脚本
-├── PLAN.md                    # 开发计划
 └── README.md                  # 本文件
 ```
 
@@ -84,10 +87,6 @@ focus-mute/
 
 - `tabs`：访问和操作浏览器标签页的静音状态
 - `storage`：保存扩展的启用/禁用状态
-
-## 开发计划
-
-详细的开发计划请查看 [PLAN.md](PLAN.md)
 
 ## 许可证
 
