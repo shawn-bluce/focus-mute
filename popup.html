@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Focus Mute</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <pre class="ascii-art">
+   __  __  ____  ____  ____  ____    ______
+  / / / /\/ __ \/ __ \/  _/\/ __ \  /_  __/
+ / /_/ // /_/ / /_/ // /  / /_/ /   / /
+/ __  // ____/ ____// /  / _, _/   / /
+/_/ /_/_/    /_/   /_/  /_/ |_|   /_/
+    </pre>
+
+    <div class="terminal">
+      <div class="terminal-header">
+        <span class="dot red"></span>
+        <span class="dot yellow"></span>
+        <span class="dot green"></span>
+        <span class="title">focus-mute@v1.0.0</span>
+      </div>
+
+      <div class="terminal-body">
+        <div class="line">
+          <span class="prompt">$</span>
+          <span class="command">cat status.txt</span>
+        </div>
+
+        <div class="status-block">
+          <div class="status-icon" id="statusIcon">[OFF]</div>
+          <div class="status-info">
+            <div class="label">STATE:</div>
+            <div class="value" id="statusValue">disabled</div>
+          </div>
+        </div>
+
+        <div class="line">
+          <span class="prompt">$</span>
+          <span class="command">./toggle.sh</span>
+        </div>
+
+        <button id="toggleButton" class="exec-button">
+          <span class="button-glyph">▶</span>
+          <span class="button-text" id="buttonText">ENABLE</span>
+        </button>
+
+        <div class="info-block">
+          <span class="comment">// Auto-mute inactive tabs</span>
+        </div>
+
+        <div class="github-link">
+          <a href="https://github.com/shawn-bluce/focus-mute" target="_blank">
+            <span class="github-icon"></span>
+            <span class="github-text">github.com/shawn-bluce/focus-mute</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>

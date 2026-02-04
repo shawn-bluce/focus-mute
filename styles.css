@@ -1,0 +1,269 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 360px;
+  font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'source-code-pro', monospace;
+  background: #0d1117;
+  color: #c9d1d9;
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.container {
+  background: #0d1117;
+}
+
+.ascii-art {
+  color: #58a6ff;
+  font-size: 8px;
+  line-height: 1.2;
+  text-align: center;
+  padding: 12px 0;
+  margin: 0;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.terminal {
+  background: #161b22;
+  border: 1px solid #30363d;
+  border-radius: 6px;
+  margin: 0 8px 8px 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+}
+
+.terminal-header {
+  background: #21262d;
+  border-bottom: 1px solid #30363d;
+  padding: 8px 12px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.dot.red {
+  background: #ff5f56;
+}
+
+.dot.yellow {
+  background: #ffbd2e;
+}
+
+.dot.green {
+  background: #27ca40;
+}
+
+.title {
+  color: #8b949e;
+  font-size: 11px;
+  margin-left: 4px;
+}
+
+.terminal-body {
+  padding: 12px;
+}
+
+.line {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+.prompt {
+  color: #58a6ff;
+  font-weight: bold;
+  user-select: none;
+}
+
+.command {
+  color: #7ee787;
+}
+
+.status-block {
+  background: #0d1117;
+  border: 1px solid #30363d;
+  border-left: 3px solid #f85149;
+  padding: 10px 12px;
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 11px;
+  transition: all 0.2s ease;
+}
+
+.status-block.enabled {
+  border-left-color: #3fb950;
+}
+
+.status-icon {
+  color: #f85149;
+  font-weight: bold;
+  font-size: 11px;
+  letter-spacing: 1px;
+  transition: all 0.2s ease;
+}
+
+.status-block.enabled .status-icon {
+  color: #3fb950;
+  text-shadow: 0 0 8px rgba(63, 185, 80, 0.5);
+}
+
+.status-info {
+  display: flex;
+  gap: 8px;
+}
+
+.label {
+  color: #8b949e;
+}
+
+.value {
+  color: #c9d1d9;
+  font-weight: bold;
+}
+
+.status-block.enabled .value {
+  color: #3fb950;
+}
+
+.exec-button {
+  width: 100%;
+  background: #238636;
+  border: 1px solid #238636;
+  color: #ffffff;
+  padding: 10px 16px;
+  font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', monospace;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  transition: all 0.15s ease;
+  margin-bottom: 12px;
+}
+
+.exec-button:hover {
+  background: #2ea043;
+  border-color: #2ea043;
+  transform: translateY(-1px);
+  box-shadow: 0 2px 8px rgba(46, 160, 67, 0.4);
+}
+
+.exec-button:active {
+  transform: translateY(0);
+  box-shadow: none;
+}
+
+.exec-button.enabled {
+  background: #da3633;
+  border-color: #da3633;
+}
+
+.exec-button.enabled:hover {
+  background: #f85149;
+  border-color: #f85149;
+  box-shadow: 0 2px 8px rgba(248, 81, 73, 0.4);
+}
+
+.exec-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.exec-button:disabled:hover {
+  transform: none;
+  box-shadow: none;
+}
+
+.button-glyph {
+  font-size: 10px;
+}
+
+.button-text {
+  letter-spacing: 1px;
+}
+
+.info-block {
+  background: #161b22;
+  border-left: 2px solid #30363d;
+  padding: 8px 12px;
+  font-size: 10px;
+}
+
+.comment {
+  color: #8b949e;
+  font-style: italic;
+}
+
+/* Cursor blink animation */
+@keyframes blink {
+  0%, 50% { opacity: 1; }
+  51%, 100% { opacity: 0; }
+}
+
+.prompt::after {
+  content: '█';
+  animation: blink 1s infinite;
+  margin-left: 2px;
+  color: #58a6ff;
+}
+
+/* GitHub Link */
+.github-link {
+  margin-top: 12px;
+  text-align: center;
+}
+
+.github-link a {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: #58a6ff;
+  text-decoration: none;
+  font-size: 10px;
+  padding: 6px 12px;
+  border: 1px solid #30363d;
+  border-radius: 4px;
+  transition: all 0.15s ease;
+  background: #161b22;
+}
+
+.github-link a:hover {
+  border-color: #58a6ff;
+  background: #1c2128;
+  box-shadow: 0 0 8px rgba(88, 166, 255, 0.3);
+}
+
+.github-icon::before {
+  content: '';
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%2358a6ff'%3E%3Cpath d='M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z'/%3E%3C/svg%3E");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.github-text {
+  font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', monospace;
+  letter-spacing: 0.5px;
+}

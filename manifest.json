@@ -1,0 +1,28 @@
+{
+  "manifest_version": 3,
+  "name": "Focus Mute",
+  "version": "1.0.0",
+  "description": "自动静音所有非活动标签页，让你专注于当前内容",
+  "author": "shawn-bluce",
+  "homepage_url": "https://github.com/shawn-bluce/focus-mute",
+  "permissions": [
+    "tabs",
+    "storage"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icons/icon-off-16.png",
+      "48": "icons/icon-off-48.png",
+      "128": "icons/icon-off-128.png"
+    }
+  },
+  "icons": {
+    "16": "icons/icon-off-16.png",
+    "48": "icons/icon-off-48.png",
+    "128": "icons/icon-off-128.png"
+  }
+}
